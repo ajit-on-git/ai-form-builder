@@ -42,7 +42,7 @@ export default function Home() {
             <div className="relative w-full h-full rounded-md">
               <Image
                 src="/images/board-img.png"
-                alt="Formy AI dashboard"
+                alt="VEDHForm dashboard"
                 fill
                 className="object-contain w-full h-full rounded-md"
               />

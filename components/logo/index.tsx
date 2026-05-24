@@ -30,7 +30,7 @@ const Logo = (props: { url?: string; color?: string }) => {
             color
           )}
         >
-          Formy.ai
+          VEDHForm
         </h5>
       </Link>
     </div>
