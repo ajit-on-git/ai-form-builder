@@ -17,7 +17,7 @@ export default function Home() {
                   AI Powered
                 </span>
                 {"  "}
-                Formy Builder
+                Form Builder
               </p>
             </h1>
             <p className=" block text-lg mt-3 max-w-2xl mx-auto w-full font-medium text-black/70">
