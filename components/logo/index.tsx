@@ -21,7 +21,7 @@ const Logo = (props: { url?: string; color?: string }) => {
                   "
           style={{ fontSize: "19px" }}
         >
-          F
+          V
         </div>
         <h5
           className={cn(
