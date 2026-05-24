@@ -15,7 +15,10 @@ const generationConfig = {
   responseMimeType: "application/json",
 };
 
-export const AIChatSession = model.startChat({
-  generationConfig,
-  history: [],
-});
+// ✅ IMPORTANT: function, not constant instance
+export const startChat = () => {
+  return model.startChat({
+    generationConfig,
+    history: [],
+  });
+};

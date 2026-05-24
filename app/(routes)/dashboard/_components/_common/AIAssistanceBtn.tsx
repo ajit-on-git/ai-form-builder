@@ -9,7 +9,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { useBuilder } from "@/context/builder-provider";
 import { toast } from "@/hooks/use-toast";
-import { AIChatSession } from "@/lib/google-ai";
+// import { AIChatSession } from "@/lib/google-ai";
 import { generateUniqueId } from "@/lib/helper";
 import { generateFormQuestionPrompt } from "@/lib/prompts";
 import { Loader, Sparkles } from "lucide-react";
@@ -43,8 +43,16 @@ const AIAssistanceBtn = () => {
         blockLayouts
       );
 
-      const result = await AIChatSession.sendMessage(PROMPT);
-      const responseText = await result.response.text();
+      const res = await fetch("/api/gemini", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ prompt: PROMPT }),
+});
+
+const data = await res.json();
+const responseText = data.text;
       const parsedResponse = JSON?.parse(responseText);
       const actionType = parsedResponse.actionType;
       const generatedBlocks = parsedResponse.blocks;
