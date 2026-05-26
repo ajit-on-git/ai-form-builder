@@ -83,7 +83,7 @@ const BuilderSidebar = ({
             >
               Blocks
             </button>
-            <button
+            {/* <button
               className={cn(
                 `p-[5px] flex-1 bg-transparent
                 transition-colors
@@ -97,7 +97,7 @@ const BuilderSidebar = ({
               onClick={() => setTab("settings")}
             >
               
-            </button>
+            </button> */}
           </div>
           {/* {Form Blocks} */}
           {tab === "blocks" && <FormBlockBox />}
