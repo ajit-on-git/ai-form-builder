@@ -96,7 +96,7 @@ const BuilderSidebar = ({
               )}
               onClick={() => setTab("settings")}
             >
-              Settings
+              
             </button>
           </div>
           {/* {Form Blocks} */}
